@@ -14,7 +14,7 @@ export function FactsStrip() {
     <section className="mt-16 border-y border-border bg-surface sm:mt-24">
       <div className="mx-auto grid max-w-wide grid-cols-2 gap-x-4 gap-y-6 px-5 py-8 sm:grid-cols-4">
         {facts.map((f) => (
-          <div key={f.value} className="text-center sm:text-left">
+          <div key={f.value} className="text-center">
             <div className="font-serif text-2xl text-ink sm:text-3xl">
               {f.value}
             </div>
