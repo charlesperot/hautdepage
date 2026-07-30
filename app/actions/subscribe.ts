@@ -11,11 +11,6 @@ export type SubscribeState = {
   message: string;
 };
 
-export const initialSubscribeState: SubscribeState = {
-  status: "idle",
-  message: "",
-};
-
 const SUCCESS_MESSAGE =
   "C'est presque bon. Ouvre l'email de confirmation qu'on vient de t'envoyer et clique sur le lien pour valider ton inscription.";
 

@@ -2,11 +2,10 @@
 
 import { useActionState, useId, useRef, useState } from "react";
 import { useFormStatus } from "react-dom";
-import {
-  subscribeAction,
-  initialSubscribeState,
-} from "@/app/actions/subscribe";
+import { subscribeAction, type SubscribeState } from "@/app/actions/subscribe";
 import { isValidEmail } from "@/lib/validation";
+
+const initialSubscribeState: SubscribeState = { status: "idle", message: "" };
 
 function SubmitButton() {
   const { pending } = useFormStatus();
