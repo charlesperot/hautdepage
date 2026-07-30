@@ -17,7 +17,7 @@ export function Author() {
             alt="Charles Perot"
             width={640}
             height={640}
-            className="h-28 w-28 shrink-0 rounded-2xl object-cover sm:h-32 sm:w-32"
+            className="h-48 w-48 shrink-0 rounded-2xl object-cover sm:h-56 sm:w-56"
           />
         )}
         <div className="max-w-2xl text-lg leading-relaxed text-ink">

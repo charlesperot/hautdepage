@@ -9,9 +9,9 @@ const without = [
 ];
 
 const withNl = [
-  "L'essentiel de la semaine en 3 minutes, chaque jeudi.",
+  "L'essentiel de la semaine en 5 minutes, chaque jeudi.",
   "Ce qui a changé — et ce que ça change pour tes campagnes.",
-  "Des avis tranchés, testés sur des comptes réels (~1 M€/mois).",
+  "Des avis tranchés, testés sur des comptes réels que je gère.",
   "Tu sais quoi faire avant tes clients et tes concurrents.",
 ];
 

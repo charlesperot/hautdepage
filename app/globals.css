@@ -41,26 +41,6 @@
   }
 }
 
-/* Bandeau de thèmes défilant */
-.marquee {
-  overflow: hidden;
-}
-.marquee__track {
-  display: inline-flex;
-  align-items: center;
-  white-space: nowrap;
-  will-change: transform;
-  animation: marquee 32s linear infinite;
-}
-@keyframes marquee {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
-}
-
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
@@ -69,11 +49,5 @@
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
-  }
-  .marquee {
-    overflow-x: auto;
-  }
-  .marquee__track {
-    animation: none;
   }
 }

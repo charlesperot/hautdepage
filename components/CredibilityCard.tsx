@@ -6,7 +6,7 @@ import Image from "next/image";
  */
 const rows: { label: string; value: string }[] = [
   { label: "Rythme", value: "Chaque jeudi" },
-  { label: "Lecture", value: "3 minutes" },
+  { label: "Lecture", value: "5 minutes" },
   { label: "Budget géré", value: "~1 M€/mois" },
   { label: "Source", value: "Comptes réels" },
   { label: "Prix", value: "Gratuit" },

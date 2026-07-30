@@ -9,7 +9,7 @@ export function Hero() {
       <div className="grid items-start gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:gap-14">
         {/* Colonne principale */}
         <div>
-          <Eyebrow>Newsletter Google Ads · Chaque jeudi · 3 min · Gratuit</Eyebrow>
+          <Eyebrow>Newsletter Google Ads · Chaque jeudi · 5 min · Gratuit</Eyebrow>
 
           <h1 className="mt-4 font-serif text-[2.1rem] leading-[1.08] text-ink sm:text-5xl">
             L&apos;actu Google Ads <em className="not-italic">passée</em>{" "}

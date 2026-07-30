@@ -1,9 +1,7 @@
 import { Hero } from "@/components/Hero";
-import { TopicsMarquee } from "@/components/TopicsMarquee";
 import { FactsStrip } from "@/components/FactsStrip";
 import { Benefits } from "@/components/Benefits";
 import { BeforeAfter } from "@/components/BeforeAfter";
-import { SampleIssue } from "@/components/SampleIssue";
 import { ForWhom } from "@/components/ForWhom";
 import { Author } from "@/components/Author";
 import { Archive } from "@/components/Archive";
@@ -16,11 +14,9 @@ export default function Home() {
     <>
       <main>
         <Hero />
-        <TopicsMarquee />
         <FactsStrip />
         <Benefits />
         <BeforeAfter />
-        <SampleIssue />
         <ForWhom />
         <Author />
         <Archive />
