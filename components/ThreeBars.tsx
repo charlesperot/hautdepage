@@ -26,11 +26,11 @@ export function ThreeBars({
       className={className}
     >
       {/* Barre 1 — orange de marque, pleine largeur */}
-      <rect x="6" y="10" width="88" height="19" rx="4.5" fill="var(--color-brand)" />
+      <rect x="6" y="10" width="88" height="19" rx="4.5" fill="rgb(var(--brand))" />
       {/* Barre 2 — grise, pleine largeur */}
-      <rect x="6" y="40.5" width="88" height="19" rx="4.5" fill="var(--color-brand-gray)" />
+      <rect x="6" y="40.5" width="88" height="19" rx="4.5" fill="rgb(var(--brand-gray))" />
       {/* Barre 3 — grise, plus courte */}
-      <rect x="6" y="71" width="60" height="19" rx="4.5" fill="var(--color-brand-gray)" />
+      <rect x="6" y="71" width="60" height="19" rx="4.5" fill="rgb(var(--brand-gray))" />
     </svg>
   );
 }

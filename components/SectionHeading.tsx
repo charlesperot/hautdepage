@@ -1,22 +1,35 @@
 import { ThreeBars } from "./ThreeBars";
+import { Eyebrow } from "./Eyebrow";
 
 /**
- * Titre de section précédé du motif 3 barres (marqueur d'index de la signature).
+ * En-tête de section : motif 3 barres (signature) + sur-titre optionnel +
+ * titre serif. `tone="dark"` pour les sections à fond sombre.
  */
 export function SectionHeading({
+  eyebrow,
   children,
   id,
+  tone = "light",
 }: {
+  eyebrow?: string;
   children: React.ReactNode;
   id?: string;
+  tone?: "light" | "dark";
 }) {
   return (
-    <h2
-      id={id}
-      className="flex items-center gap-3 font-serif text-2xl text-ink sm:text-3xl"
-    >
-      <ThreeBars size={22} className="shrink-0" />
-      {children}
-    </h2>
+    <div>
+      <div className="flex items-center gap-2.5">
+        <ThreeBars size={18} className="shrink-0" />
+        {eyebrow && <Eyebrow>{eyebrow}</Eyebrow>}
+      </div>
+      <h2
+        id={id}
+        className={`mt-3 font-serif text-2xl sm:text-3xl ${
+          tone === "dark" ? "text-white" : "text-ink"
+        }`}
+      >
+        {children}
+      </h2>
+    </div>
   );
 }

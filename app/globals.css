@@ -2,21 +2,22 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Tokens en canaux RGB pour que les modificateurs d'opacité Tailwind
+   (bg-accent/5, border-brand/30, …) fonctionnent. */
 :root {
-  --color-bg: #ffffff;
-  --color-surface: #f7f6f4;
-  --color-ink: #161412;
-  --color-muted: #57534e;
-  /* Orange de marque (vif) : le bloc du logo + le filet de signature.
-     Décoratif → pas de contrainte de contraste. */
-  --color-brand: #e8552b;
+  --bg: 255 255 255;
+  --surface: 247 246 244;
+  --ink: 22 20 18;
+  --muted: 87 83 78;
+  /* Orange de marque (vif) : logo, filet, sections sombres. Décoratif. */
+  --brand: 232 85 43;
   /* Gris clair des 2e/3e barres du logo. */
-  --color-brand-gray: #d6d6d6;
+  --brand-gray: 214 214 214;
   /* Orange d'accent (plus profond) : bouton, liens, focus. Texte blanc
-     AA-compliant (5.18:1) — le orange vif de la marque tomberait à 3,65:1. */
-  --color-accent: #c2410c;
-  --color-accent-strong: #9a3412;
-  --color-border: #e7e5e4;
+     AA-compliant (5.18:1) — le orange vif tomberait à 3,65:1. */
+  --accent: 194 65 12;
+  --accent-strong: 154 52 18;
+  --border: 231 229 228;
 }
 
 @layer base {
@@ -25,8 +26,8 @@
   }
 
   body {
-    background-color: var(--color-bg);
-    color: var(--color-ink);
+    background-color: rgb(var(--bg));
+    color: rgb(var(--ink));
     font-family: var(--font-sans), system-ui, sans-serif;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
@@ -34,9 +35,29 @@
 
   /* Visible keyboard focus, consistent across interactive elements */
   :focus-visible {
-    outline: 2px solid var(--color-accent);
+    outline: 2px solid rgb(var(--accent));
     outline-offset: 2px;
     border-radius: 2px;
+  }
+}
+
+/* Bandeau de thèmes défilant */
+.marquee {
+  overflow: hidden;
+}
+.marquee__track {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  will-change: transform;
+  animation: marquee 32s linear infinite;
+}
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
   }
 }
 
@@ -48,5 +69,11 @@
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
+  }
+  .marquee {
+    overflow-x: auto;
+  }
+  .marquee__track {
+    animation: none;
   }
 }

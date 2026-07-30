@@ -5,14 +5,14 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        bg: "var(--color-bg)",
-        surface: "var(--color-surface)",
-        brand: "var(--color-brand)",
-        ink: "var(--color-ink)",
-        muted: "var(--color-muted)",
-        accent: "var(--color-accent)",
-        "accent-strong": "var(--color-accent-strong)",
-        border: "var(--color-border)",
+        bg: "rgb(var(--bg) / <alpha-value>)",
+        surface: "rgb(var(--surface) / <alpha-value>)",
+        brand: "rgb(var(--brand) / <alpha-value>)",
+        ink: "rgb(var(--ink) / <alpha-value>)",
+        muted: "rgb(var(--muted) / <alpha-value>)",
+        accent: "rgb(var(--accent) / <alpha-value>)",
+        "accent-strong": "rgb(var(--accent-strong) / <alpha-value>)",
+        border: "rgb(var(--border) / <alpha-value>)",
       },
       fontFamily: {
         serif: ["var(--font-serif)", "Georgia", "serif"],
@@ -20,6 +20,7 @@ const config: Config = {
       },
       maxWidth: {
         content: "52rem",
+        wide: "64rem",
       },
     },
   },

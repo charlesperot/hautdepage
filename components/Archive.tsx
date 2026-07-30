@@ -9,7 +9,7 @@ export function Archive() {
   if (!archiveUrl) return null;
 
   return (
-    <section className="mx-auto max-w-content px-5 pt-16 sm:pt-24">
+    <section className="mx-auto max-w-wide px-5 pt-16 sm:pt-24">
       <SectionHeading>Dernières éditions</SectionHeading>
       <p className="mt-6 text-muted">
         Tu veux voir le niveau avant de t&apos;abonner ? Les éditions passées

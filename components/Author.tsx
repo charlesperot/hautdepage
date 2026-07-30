@@ -6,8 +6,10 @@ const AUTHOR_PHOTO: string | null = "/charles.jpg";
 
 export function Author() {
   return (
-    <section className="mx-auto max-w-content px-5 pt-16 sm:pt-24">
-      <SectionHeading>Qui écrit</SectionHeading>
+    <section className="mx-auto max-w-wide px-5 pt-16 sm:pt-24">
+      <SectionHeading eyebrow="Qui écrit">
+        Écrite par quelqu&apos;un qui gère vraiment des comptes.
+      </SectionHeading>
       <div className="mt-8 flex flex-col gap-5 sm:flex-row sm:items-start sm:gap-7">
         {AUTHOR_PHOTO && (
           <Image
@@ -18,7 +20,7 @@ export function Author() {
             className="h-28 w-28 shrink-0 rounded-2xl object-cover sm:h-32 sm:w-32"
           />
         )}
-        <div className="text-lg leading-relaxed text-ink">
+        <div className="max-w-2xl text-lg leading-relaxed text-ink">
           <p>
             Moi c&apos;est Charles. Je gère une agence Google Ads qui dépense
             environ <span className="whitespace-nowrap">1&nbsp;M€/mois</span>{" "}

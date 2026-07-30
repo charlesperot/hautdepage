@@ -63,7 +63,7 @@ export default function RootLayout({
     <html lang="fr" className={`${serif.variable} ${sans.variable}`}>
       <body className="min-h-screen bg-bg text-ink antialiased">
         <TopBand />
-        <header className="mx-auto max-w-content px-5 pt-6">
+        <header className="mx-auto max-w-wide px-5 pt-6">
           <Logo />
         </header>
         {children}
