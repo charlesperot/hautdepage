@@ -11,8 +11,8 @@ export const contentType = "image/png";
  * un export du logo définitif plus tard.
  */
 export default function OpengraphImage() {
-  const accent = "#c2410c";
-  const gray = "#a8a29e";
+  const brand = "#e8552b";
+  const gray = "#d6d6d6";
   const ink = "#161412";
   const muted = "#57534e";
 
@@ -28,7 +28,7 @@ export default function OpengraphImage() {
           fontFamily: "serif",
         }}
       >
-        <div style={{ height: 14, width: "100%", backgroundColor: accent }} />
+        <div style={{ height: 14, width: "100%", backgroundColor: brand }} />
         <div
           style={{
             display: "flex",
@@ -47,9 +47,9 @@ export default function OpengraphImage() {
                 width: 72,
               }}
             >
-              <div style={{ height: 16, borderRadius: 4, backgroundColor: accent }} />
+              <div style={{ height: 16, borderRadius: 4, backgroundColor: brand }} />
               <div style={{ height: 16, borderRadius: 4, backgroundColor: gray }} />
-              <div style={{ height: 16, borderRadius: 4, backgroundColor: gray }} />
+              <div style={{ width: 48, height: 16, borderRadius: 4, backgroundColor: gray }} />
             </div>
             <div
               style={{
@@ -90,7 +90,7 @@ export default function OpengraphImage() {
               color: muted,
             }}
           >
-            <div style={{ width: 40, height: 4, backgroundColor: accent }} />
+            <div style={{ width: 40, height: 4, backgroundColor: brand }} />
             Par Charles Perot · ~1 M€/mois de budget Google Ads
           </div>
         </div>

@@ -3,5 +3,5 @@
  * littérale du logo — « le haut de la page », la position 1.
  */
 export function TopBand() {
-  return <div className="h-1.5 w-full bg-accent" aria-hidden="true" />;
+  return <div className="h-1.5 w-full bg-brand" aria-hidden="true" />;
 }

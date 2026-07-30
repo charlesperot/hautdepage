@@ -4,8 +4,8 @@ export const size = { width: 180, height: 180 };
 export const contentType = "image/png";
 
 /**
- * Icône Apple PLACEHOLDER : le bloc 3 barres du logo. À remplacer par l'icône
- * générée depuis le favicon définitif fourni.
+ * Icône Apple : le bloc 3 barres du logo (3e plus courte), reconstitué d'après
+ * le logo fourni. Fond blanc, coins arrondis pour l'écran d'accueil iOS.
  */
 export default function AppleIcon() {
   return new ImageResponse(
@@ -18,13 +18,13 @@ export default function AppleIcon() {
           flexDirection: "column",
           justifyContent: "center",
           gap: 20,
-          padding: 40,
+          padding: "0 34px",
           backgroundColor: "#ffffff",
         }}
       >
-        <div style={{ height: 26, borderRadius: 8, backgroundColor: "#c2410c" }} />
-        <div style={{ height: 26, borderRadius: 8, backgroundColor: "#a8a29e" }} />
-        <div style={{ height: 26, borderRadius: 8, backgroundColor: "#a8a29e" }} />
+        <div style={{ height: 30, borderRadius: 8, backgroundColor: "#e8552b" }} />
+        <div style={{ height: 30, borderRadius: 8, backgroundColor: "#d6d6d6" }} />
+        <div style={{ width: "66%", height: 30, borderRadius: 8, backgroundColor: "#d6d6d6" }} />
       </div>
     ),
     size,

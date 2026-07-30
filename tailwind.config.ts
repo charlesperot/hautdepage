@@ -7,6 +7,7 @@ const config: Config = {
       colors: {
         bg: "var(--color-bg)",
         surface: "var(--color-surface)",
+        brand: "var(--color-brand)",
         ink: "var(--color-ink)",
         muted: "var(--color-muted)",
         accent: "var(--color-accent)",

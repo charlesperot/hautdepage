@@ -7,8 +7,13 @@
   --color-surface: #f7f6f4;
   --color-ink: #161412;
   --color-muted: #57534e;
-  /* Orange d'accent. #c2410c au lieu de #d9480f : même famille mais texte
-     blanc AA-compliant (5.18:1) sur le bouton et en couleur de lien. */
+  /* Orange de marque (vif) : le bloc du logo + le filet de signature.
+     Décoratif → pas de contrainte de contraste. */
+  --color-brand: #e8552b;
+  /* Gris clair des 2e/3e barres du logo. */
+  --color-brand-gray: #d6d6d6;
+  /* Orange d'accent (plus profond) : bouton, liens, focus. Texte blanc
+     AA-compliant (5.18:1) — le orange vif de la marque tomberait à 3,65:1. */
   --color-accent: #c2410c;
   --color-accent-strong: #9a3412;
   --color-border: #e7e5e4;
