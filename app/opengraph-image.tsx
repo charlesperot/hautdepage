@@ -1,3 +1,5 @@
+import { readFileSync } from "fs";
+import { join } from "path";
 import { ImageResponse } from "next/og";
 import { site } from "@/lib/site";
 
@@ -6,15 +8,16 @@ export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
 /**
- * Image OG 1200×630 générée depuis le concept du logo (bloc 3 barres + marque).
- * PLACEHOLDER visuel : reconstitué en éléments simples. Peut être remplacé par
- * un export du logo définitif plus tard.
+ * Image OG 1200×630. Le logo officiel (public/logo.png) est intégré tel quel,
+ * lu au build et encodé en data URI (le runtime Node de cette route permet fs).
  */
 export default function OpengraphImage() {
   const brand = "#e8552b";
-  const gray = "#d6d6d6";
   const ink = "#161412";
   const muted = "#57534e";
+
+  const logoData = readFileSync(join(process.cwd(), "public/logo.png"));
+  const logoSrc = `data:image/png;base64,${logoData.toString("base64")}`;
 
   return new ImageResponse(
     (
@@ -38,30 +41,8 @@ export default function OpengraphImage() {
             justifyContent: "space-between",
           }}
         >
-          <div style={{ display: "flex", alignItems: "center", gap: 24 }}>
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                gap: 10,
-                width: 72,
-              }}
-            >
-              <div style={{ height: 16, borderRadius: 4, backgroundColor: brand }} />
-              <div style={{ height: 16, borderRadius: 4, backgroundColor: gray }} />
-              <div style={{ width: 48, height: 16, borderRadius: 4, backgroundColor: gray }} />
-            </div>
-            <div
-              style={{
-                fontSize: 40,
-                letterSpacing: 4,
-                color: ink,
-                textTransform: "uppercase",
-              }}
-            >
-              Haut de Page
-            </div>
-          </div>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src={logoSrc} width={440} height={110} alt="" />
 
           <div style={{ display: "flex", flexDirection: "column" }}>
             <div

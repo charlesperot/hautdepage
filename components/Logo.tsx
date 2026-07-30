@@ -1,23 +1,26 @@
+import Image from "next/image";
 import Link from "next/link";
 import { site } from "@/lib/site";
-import { ThreeBars } from "./ThreeBars";
 
 /**
- * Mot-marque : le bloc 3 barres + « HAUT DE PAGE » composé en Instrument Serif
- * (la police du logo). Le texte est du vrai texte, donc net, scalable et
- * accessible. Quand le logo définitif arrive, il suffit de le brancher ici.
+ * Mot-marque officiel (fichier fourni : bloc 3 barres + « HAUT DE PAGE »).
+ * Le PNG fait 1000×250 ; on l'affiche à hauteur fixe, largeur auto.
  */
 export function Logo({ className = "" }: { className?: string }) {
   return (
     <Link
       href="/"
-      className={`inline-flex items-center gap-2.5 ${className}`}
+      className={`inline-flex ${className}`}
       aria-label={`${site.name} — accueil`}
     >
-      <ThreeBars size={22} />
-      <span className="font-serif text-xl uppercase leading-none tracking-[0.06em] text-ink">
-        Haut de Page
-      </span>
+      <Image
+        src="/logo.png"
+        alt={site.name}
+        width={1000}
+        height={250}
+        priority
+        className="h-8 w-auto sm:h-9"
+      />
     </Link>
   );
 }
