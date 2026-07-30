@@ -1,26 +1,21 @@
 import Image from "next/image";
 import { SectionHeading } from "./SectionHeading";
 
-/**
- * Photo optionnelle. Quand Charles fournit une photo :
- *   1. déposer le fichier dans /public/charles.jpg (ou .webp)
- *   2. passer AUTHOR_PHOTO ci-dessous à son chemin ("/charles.jpg")
- * Tant que c'est null, la section s'affiche proprement sans photo.
- */
-const AUTHOR_PHOTO: string | null = null;
+/** Photo de l'auteur (recadrée/compressée dans public/charles.jpg). */
+const AUTHOR_PHOTO: string | null = "/charles.jpg";
 
 export function Author() {
   return (
     <section className="mx-auto max-w-content px-5 pt-16 sm:pt-24">
       <SectionHeading>Qui écrit</SectionHeading>
-      <div className="mt-8 flex flex-col gap-5 sm:flex-row sm:items-start sm:gap-6">
+      <div className="mt-8 flex flex-col gap-5 sm:flex-row sm:items-start sm:gap-7">
         {AUTHOR_PHOTO && (
           <Image
             src={AUTHOR_PHOTO}
             alt="Charles Perot"
-            width={96}
-            height={96}
-            className="h-24 w-24 shrink-0 rounded-full object-cover"
+            width={640}
+            height={640}
+            className="h-28 w-28 shrink-0 rounded-2xl object-cover sm:h-32 sm:w-32"
           />
         )}
         <div className="text-lg leading-relaxed text-ink">
