@@ -12,7 +12,7 @@ export type SubscribeState = {
 };
 
 const SUCCESS_MESSAGE =
-  "C'est presque bon. Ouvre l'email de confirmation qu'on vient de t'envoyer et clique sur le lien pour valider ton inscription.";
+  "C'est bon, tu es inscrit. Rendez-vous jeudi pour la prochaine édition — pense à vérifier tes spams si tu ne vois rien arriver.";
 
 const GENERIC_ERROR =
   "Impossible de t'inscrire pour l'instant. Réessaie dans quelques instants.";

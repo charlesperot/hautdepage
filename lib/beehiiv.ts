@@ -43,7 +43,9 @@ export async function subscribeToBeehiiv({
       body: JSON.stringify({
         email,
         send_welcome_email: true,
-        double_opt_override: "on",
+        // Opt-in simple : l'abonné est actif immédiatement, pas d'email de
+        // confirmation à cliquer.
+        double_opt_override: "off",
         utm_source: "landing",
         utm_medium: "site",
         referring_site: referringSite,

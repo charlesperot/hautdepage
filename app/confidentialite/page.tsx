@@ -56,9 +56,9 @@ export default function Confidentialite() {
         <section>
           <h2>Consentement et désinscription</h2>
           <p>
-            L&apos;inscription se fait en double opt-in : tu reçois un email de
-            confirmation à valider. Chaque édition contient un lien de
-            désinscription en un clic, effectif immédiatement.
+            Ton inscription est prise en compte immédiatement. Chaque édition
+            contient un lien de désinscription en un clic, effectif
+            immédiatement.
           </p>
         </section>
 
